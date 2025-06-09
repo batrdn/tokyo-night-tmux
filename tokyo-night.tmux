@@ -77,4 +77,4 @@ tmux set -g window-status-format "$RESET#[fg=${THEME[foreground]}] #{?#{==:#{pan
 
 #+--- Bars RIGHT ---+
 tmux set -g status-right "$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time"
-tmux set -g window-status-separator ""
+tmux set -g window-status-separator ""
