@@ -43,6 +43,7 @@ zoom_id_style="$(echo "$TMUX_VARS" | grep '@tokyo-night-tmux_zoom_id_style' | cu
 terminal_icon="$(echo "$TMUX_VARS" | grep '@tokyo-night-tmux_terminal_icon' | cut -d" " -f2)"
 active_terminal_icon="$(echo "$TMUX_VARS" | grep '@tokyo-night-tmux_active_terminal_icon' | cut -d" " -f2)"
 window_tidy="$(echo "$TMUX_VARS" | grep '@tokyo-night-tmux_window_tidy_icons' | cut -d" " -f2)"
+window_separator="$(echo "$TMUX_VARS" | grep '@tokyo-night-tmux_window_separator' | cut -d" " -f2)"
 
 window_id_style="${window_id_style:-$default_window_id_style}"
 pane_id_style="${pane_id_style:-$default_pane_id_style}"
@@ -77,4 +78,4 @@ tmux set -g window-status-format "$RESET#[fg=${THEME[foreground]}] #{?#{==:#{pan
 
 #+--- Bars RIGHT ---+
 tmux set -g status-right "$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time"
-tmux set -g window-status-separator ""
+tmux set -g window-status-separator "$window_separator"
